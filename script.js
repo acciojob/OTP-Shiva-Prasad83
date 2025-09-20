@@ -4,11 +4,13 @@ const inputs=document.querySelectorAll(".code");
         inputs.forEach((input,index)=>{
             input.addEventListener("keyup",(e)=>{
                 if(index!=inputs.length-1 && e.key!="Backspace"){
-                    inputs[index+1].focus();
+                    let focused=inputs[index+1];
+					focused.focus();
                 }
                 if(index!=0 && e.key=="Backspace"){
                     inputs[index].innerText="";
-                    inputs[index-1].focus();
+                   let focused=inputs[index-1];
+					focused.focus()
                 }else{
                     inputs[index].innerText="";
                 }

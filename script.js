@@ -1,6 +1,7 @@
 //your JS code here. If required.
 const inputs=document.querySelectorAll(".code");
         // console.log(inputs);
+inputs[0].focus();
         inputs.forEach((input,index)=>{
             input.addEventListener("input",(e)=>{
                 if(index<inputs.length-1){
